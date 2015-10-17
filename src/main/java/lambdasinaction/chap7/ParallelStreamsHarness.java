@@ -24,7 +24,7 @@ public class ParallelStreamsHarness {
             long start = System.nanoTime();
             R result = f.apply(input);
             long duration = (System.nanoTime() - start) / 1_000_000;
-            System.out.println("Result: " + result);
+        //    System.out.println("Result: " + result);
             if (duration < fastest) fastest = duration;
         }
         return fastest;

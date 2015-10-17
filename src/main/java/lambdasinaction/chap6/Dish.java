@@ -39,6 +39,26 @@ public class Dish {
         return name;
     }
 
+    @Override
+    public int hashCode() {
+        return 0;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if ( ! (obj instanceof Dish)) {
+            return false;
+        }
+        
+        Dish other = (Dish) obj;
+        
+        return name.equals(other.name);
+    }
+    
+    
+    
+    
+
     public static final List<Dish> menu =
             Arrays.asList( new Dish("pork", false, 800, Dish.Type.MEAT),
                            new Dish("beef", false, 700, Dish.Type.MEAT),
